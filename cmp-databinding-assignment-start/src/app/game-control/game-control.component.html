@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="btn btn-primary" (click)="start()" [ngClass]="{'disabled': running}">Start</div>
+      <div class="btn btn-danger"  (click)="stop()"  [ngClass]="{'disabled': !running}">Stop</div>
+    </div>
+  </div>
+</div>
