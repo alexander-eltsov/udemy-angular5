@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  selectedTab = 'recipes';
+
+  selectTab(event: {selectedTab: string}) {
+    this.selectedTab = event.selectedTab;
+  }
 }
