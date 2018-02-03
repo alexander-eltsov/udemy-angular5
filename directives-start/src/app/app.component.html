@@ -4,16 +4,27 @@
       <button
         class="btn btn-primary"
         (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
-      <br><br>
+      <br>
       <ul class="list-group">
-        <div *ngIf="!onlyOdd">
+        
+        <!-- <div *ngIf="!onlyOdd">
             <li
               class="list-group-item"
               [ngClass]="{'even': !onlyOdd}"
               *ngFor="let even of evenNumbers">
             {{ even }}
           </li>
+        </div> -->
+        <!-- custom structural directive example -->
+        <div *appUnless="onlyOdd">
+          <li
+            class="list-group-item"
+            [ngClass]="{'even': !onlyOdd}"
+            *ngFor="let even of evenNumbers">
+            {{ even }}
+          </li>
         </div>
+
         <div *ngIf="onlyOdd">
             <li
               class="list-group-item"
@@ -24,7 +35,7 @@
         </div>
       </ul>
       <p appBasicHighlight>Style with a directve!</p>
-      <p appBetterHighlight>Style with a directve!</p>
+      <p appBetterHighlight [foreColor]="'white'" backColor="blue">Style with a directve!</p>
       <ng-template [ngIf]="onlyOdd">
         <p>Only odd</p>
       </ng-template>
