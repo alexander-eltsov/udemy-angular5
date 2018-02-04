@@ -10,9 +10,7 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
-import { OrganizationsComponent } from './organizations/organizations.component';
-import { OrganizationListComponent } from './organizations/organization-list/organization-list.component';
-import { OrganizationItemComponent } from './organizations/organization-list/organization-item/organization-item.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 
 @NgModule({
@@ -25,9 +23,7 @@ import { OrganizationItemComponent } from './organizations/organization-list/org
     RecipeListComponent,
     RecipeDetailComponent,
     RecipeItemComponent,
-    OrganizationsComponent,
-    OrganizationListComponent,
-    OrganizationItemComponent
+    DropdownDirective
   ],
   imports: [
     BrowserModule
